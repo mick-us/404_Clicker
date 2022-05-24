@@ -28,15 +28,13 @@ body {
     min-height: 100%;
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
-    background-image: url("../images/background_404.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
     position: relative;
     width: 100%;
+    background-color: $color2;
 
-    h1 {
+    h1, h2 {
         font-family: 'Press Start 2P', cursive;
+        color: $color4;
     }
 
     p {
@@ -46,12 +44,11 @@ body {
     a {
         text-decoration: none;
     }
-    .alert-test {
-        background-color: $color2;
+    .alert-message {
+        background-color: $color1;
         color: $color3;
         text-align: center;
         border: none;
-        width: 90%;
         margin: 0 auto;
     }
 }

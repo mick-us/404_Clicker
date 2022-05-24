@@ -2,10 +2,9 @@
   Classement Section
 ------------------------*/
 .classement-wrapper {
-    height: 80vh;
+    height: 85vh;
     display: flex;
     justify-content: center;
-    margin: 1rem auto;
 
     .classement-content {
         display: flex;
@@ -16,8 +15,12 @@
         min-width: 350px;
         height: 100%;
 
+        h1 {
+            color: $color4;
+        }
+
         .table.table-bordered {
-            border: 3px solid $color4;
+            border: 3px solid $color2;
             margin-top: 1rem;
             background-color: $color3;
 

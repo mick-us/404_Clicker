@@ -16,12 +16,12 @@
     /* Full height */
     overflow: auto;
     /* Enable scroll if needed */
-    background: $color3;
+    background: $color2;
 
     .loader {
         width: 200px;
         height: 200px;
-        margin: 25% auto;
+        margin: 20% auto;
         position: relative;
         animation: loader 5s linear infinite;
     }

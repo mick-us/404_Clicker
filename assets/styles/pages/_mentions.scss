@@ -1,0 +1,34 @@
+/*---------------------
+   Mentions section
+  ----------------------*/
+.wrapper-mentions {
+    overflow: scroll;
+    width: 100%;
+
+    .container.mentions {
+        margin : 2rem auto;
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+
+        h1 {
+            text-align: center;
+            color: $color4;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            color: $color4;
+        }
+        
+        .mentions-text p {
+            font-size: 1.2rem;
+            color: $color3;
+
+            a {
+                color: $color1;
+            }
+        }
+    } 
+}

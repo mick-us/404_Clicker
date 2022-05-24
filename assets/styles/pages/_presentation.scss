@@ -1,0 +1,50 @@
+/*------------------
+   Présentation section
+   ---------------------*/
+.example-wrapper-presentation {
+  height: 85vh;
+
+  .container.presentation {
+    margin: 2rem auto;
+    height: 100%;
+    width: 100%;
+    
+    h1, h2 {
+      text-align: center;
+      color: $color4;
+    }
+    
+    .text-presentation p {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      font-size: 1.4rem;
+      color: $color3;
+    }
+    
+    .team-presentation {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: .8rem;
+
+      .images-presentation {
+          margin: 2rem auto;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          figcaption {
+            margin-top: .5rem;
+            color: $color4;
+          }
+
+          p {
+            font-size: 1.4rem;
+            color: $color3;
+          }
+        }
+      }  
+  }
+}
+

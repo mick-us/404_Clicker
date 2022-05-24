@@ -5,9 +5,11 @@
 {% block body %}
 <section class="edit-wrapper">
     <h1>Changement mot de passe</h1>
-    <div class="form-edit">
-    {{ include('user/_form.html.twig', {'button_label': 'Confirmer'}) }}
-    </div>
-    <a href="{{ path('app_user_show', {'id': user.id}) }}">Retour au profil</a>
+    <div class="form-buttons">
+        <div class="form-edit">
+            {{ include('user/_form.html.twig', {'button_label': 'Confirmer'}) }}
+        </div>
+        <a href="{{ path('app_user_show', {'id': user.id}) }}">Retour au profil</a>
+    </div>   
 </section>
 {% endblock %}

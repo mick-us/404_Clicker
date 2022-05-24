@@ -1,8 +1,7 @@
 /*----------------------
-   Register Section
+   Login Section
  ------------------------*/
-
-.register-wrapper{
+.form-container {
     height: 80vh;
     width: 100%;
     margin: 2rem auto;
@@ -11,15 +10,17 @@
     justify-content: center;
     align-items: center;
     max-width: 450px;
-    
-    p{font-size:1.0rem;}
 
-    .form-content{
+    .form-content {
         padding: 2rem;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        h1 {
+            color: $color4;
+        }
 
         .form-field {
             margin-top: 0.5rem;
@@ -28,7 +29,8 @@
             label {
                 font-family: 'EB Garamond';
                 font-weight: 400;
-                font-size: 1.2rem;
+                font-size: 1rem;
+                color: $color3;
             }
         }
     }
@@ -51,11 +53,12 @@
 
         a {
             display: block;
-            color: $color2;
+            color: $color4;
             font-family: "EB Garamond", serif;
             text-decoration: underline;
             font-size: 1.2rem;
             margin-top: 1rem;
+            transition: .3s;
 
             &:hover {
                 color: $color4;

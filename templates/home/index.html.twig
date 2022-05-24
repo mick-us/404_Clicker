@@ -4,12 +4,12 @@
 
 {% block body %}
     {% for message in app.flashes('success') %}
-        <div class="alert alert-success alert-test">
+        <div class="alert alert-success alert-message">
             {{ message }}
         </div>
     {% endfor %}
     <section class="home-wrapper">
-        <div class="home-content">
+        <div class="container home">
             <h1>404 Clicker</h1>
             <p>Les développeurs web sont toujours confrontés à des pages d'erreur 404 lors du développement d'un projet. Ça peut
                 être très frustrant, mais c'est grâce à ces erreurs qu'on finit par apprendre et à se perfectionner. 404 Clicker
@@ -21,10 +21,10 @@
                 <p>Une fois inscris, lancez le jeu en cliquant sur Jouer dans le menu de navigation. Ensuite, cliquez sur l'image centrale pour cumuler des erreurs.</p>
                 <p>A un certain nombre d'erreurs vous acquérez plus d'expérience et vous passez de niveau :</p>
                 <ul class="home-wrapper-text">
-                    <li><span>Level 1</span> - Conception : 0 erreur</li>
-                    <li><span>Level 2</span> - Développement : 20 erreurs</li>
-                    <li><span>Level 3</span> - Production : 50 erreurs</li>
-                    <li><span>Level 4</span> - Mise en ligne / 404 : 100 erreurs</li>
+                    <li><span>Level 1</span> - <span class="level-name">Conception :</span> 0 erreur</li>
+                    <li><span>Level 2</span> - <span class="level-name">Développement :</span> 20 erreurs</li>
+                    <li><span>Level 3</span> - <span class="level-name">Production :</span> 50 erreurs</li>
+                    <li><span>Level 4</span> - <span class="level-name">Mise en ligne / 404 :</span> 100 erreurs</li>
                 </ul>
                 <p class="home-wrapper-text">Surmonter le plus d'erreurs fera de vous le meilleur programmeur! </p>
             </div>

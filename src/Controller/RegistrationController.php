@@ -58,12 +58,6 @@ class RegistrationController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-
-            //vérifier si les champs saisis pour cet utilisateur existent déjà dans la base de données
-            if ($this->getUser()) {
-                $this->addFlash('error', 'Utilisateur et/ou email déjà enregistré');
-                return $this->redirectToRoute('inscription');
-            }
             
             // encode the plain password
             $user->setPassword(
@@ -128,7 +122,7 @@ class RegistrationController extends AbstractController
         }
 
         // @TODO Change the redirect on success and handle or remove the flash message in your templates
-        $this->addFlash('success', "Votre adresse email vient d'être vérifiée avec succès.");
+        $this->addFlash('success', "Vous êtes bien connecté, cliquer sur Jouer pour commencer une partie.");
 
         return $this->redirectToRoute('inscription');
     }

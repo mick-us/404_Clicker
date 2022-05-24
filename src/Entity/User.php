@@ -6,9 +6,11 @@ use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
+ * @UniqueEntity("email")
  * @ORM\HasLifecycleCallbacks
  */
 class User implements UserInterface, PasswordAuthenticatedUserInterface
@@ -56,15 +58,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $updatedAt;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $token;
-
-    /**
-     * @ORM\Column(type="datetime", nullable=true)
-     */
-    private $tokenDateValid;
 
     /**
      * @ORM\Column(type="boolean")
@@ -275,30 +268,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setUpdatedAt(): self
     {
         $this->updatedAt = new \DateTimeImmutable;
-
-        return $this;
-    }
-
-    public function getToken(): ?string
-    {
-        return $this->token;
-    }
-
-    public function setToken(?string $token): self
-    {
-        $this->token = $token;
-
-        return $this;
-    }
-
-    public function getTokenDateValid(): ?\DateTimeInterface
-    {
-        return $this->tokenDateValid;
-    }
-
-    public function setTokenDateValid(?\DateTimeInterface $tokenDateValid): self
-    {
-        $this->tokenDateValid = $tokenDateValid;
 
         return $this;
     }

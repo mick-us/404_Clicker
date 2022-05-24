@@ -20,14 +20,9 @@ class Level
     private $id;
 
     /**
-     * @ORM\Column(type="float")
-     */
-    private $maxPoints;
-
-    /**
      * @ORM\Column(type="string", length=255)
      */
-    private $pathImg;
+    private $image;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -50,51 +45,27 @@ class Level
     }
 
     /**
-     * Fonction qui permet de récupérer le score maximal d'un joueur
-     * 
-     */
-    public function getMaxPoints(): ?float
-    {
-        return $this->maxPoints;
-    }
-
-    /**
-     * Fonction qui permet de définir le score maximal d'un joueur
-     *
-     * @param float $maxPoints
-     * 
-     * @return self
-     * 
-     */
-    public function setMaxPoints(float $maxPoints): self
-    {
-        $this->maxPoints = $maxPoints;
-
-        return $this;
-    }
-
-    /**
-     * Fonction qui permet de récupérer le chemin de l'image associée à un niveau
+     * Fonction qui permet de récupérer l'image associée à un niveau
      *
      * @return string|null
      * 
      */
-    public function getPathImg(): ?string
+    public function getImage(): ?string
     {
-        return $this->pathImg;
+        return $this->image;
     }
 
     /**
-     * Fonction qui permet de définir le chemin de l'image associée à un niveau
+     * Fonction qui permet de définir l'image associée à un niveau
      *
-     * @param string $pathImg
+     * @param string $image
      * 
      * @return self
      * 
      */
-    public function setPathImg(string $pathImg): self
+    public function setImage(string $image): self
     {
-        $this->pathImg = $pathImg;
+        $this->image = $image;
 
         return $this;
     }

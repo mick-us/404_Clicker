@@ -5,11 +5,11 @@
 {% block body %}
 
 
-<div class="example-wrapper-plan">
+<div class="wrapper-plan">
     <h1>Plan du site</h1>
 
     <div class="none_connected">
-        <p>Non Connecté :</p>
+        <h2>Non Connecté</h2>
         <ul>
             <li><a href="{{ path('home') }}">Accueil</a></li>
             <li><a href="{{ path('presentation') }}">Présentation</a></li>
@@ -20,7 +20,7 @@
     </div>
 
     <div class="connected">
-        <p>Connecté :</p>
+        <h2>Connecté</h2>
         <ul>
             <li><a href="{{ path('home') }}">Accueil</a></li>
             <li><a href="{{ path('presentation') }}">Présentation</a></li>

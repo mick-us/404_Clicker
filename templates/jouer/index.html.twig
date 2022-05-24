@@ -17,32 +17,32 @@
     </div>
 </div>
 
-<div class="example-wrapper-jouer">
-    <div class="hud">
-        <p>{{app.user.username}}</p>
-        <p>{{ app.user.level.getNomLevel() }}</p>
+<div class="wrapper-jouer">
+    <div class="container jouer">
+        <p><span>Pseudo :</span> {{app.user.username}}</p>
+        <p><span>Niveau :</span> {{ app.user.level.getNomLevel() }}</p>
         {# Passage d'un data- attribut pour récupérer les points dans JS #}
         <div id="score" data-user-level="{{ changeLevel }}" data-user-points="{{ app.user.points }}">
-        <p> Le nombre d'erreur(s) est de {{app.user.points}} </p>
+        <p><span>Points :</span> {{app.user.points}} </p>
         </div>
     </div>
     <div class="image-button">
         {% if app.user.points < 20 %} 
-        <img id="image" src="{{asset('build/images/level1_concept.png')}}" alt="Level concept">   
+        <img class="image" src="{{asset('build/images/level1_concept.png')}}" alt="Level concept">   
         {% endif %}
         
         {% if app.user.points >= 20 and app.user.points < 50 %} 
-        <img id="image"
+        <img class="image"
         src="{{asset('build/images/level2_dev.png')}}" alt="Level dev">
         {% endif %}
 
         {% if app.user.points >= 50 and app.user.points < 100 %} 
-        <img id="image"
+        <img class="image"
         src="{{asset('build/images/level3_prod.png')}}" alt="Level production">
         {% endif %}
         
         {% if app.user.points >= 100 %}
-        <img id="image" src="{{asset('build/images/404.png')}}" alt="Level 404">
+        <img class="image error" src="{{asset('build/images/404.png')}}" alt="Level 404">
         {% endif %}
         <button class="save-points" type="submit">Sauvegardez les points</button>
     </div>
@@ -50,6 +50,6 @@
 {% endblock %}
 
 {% block javascripts %}
-    {# Appel au fichier assets/js/fichier.js #}
+    {# Appel au fichier assets/js/jouer.js #}
     {{ encore_entry_script_tags('jouer') }}
 {% endblock %}

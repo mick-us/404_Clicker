@@ -3,17 +3,21 @@ Profil Section
 ------------------------*/ 
 .profil-wrapper {
     text-align: center;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     h1 {
         display: inline-block;
         margin: 2rem auto;
+        color: $color4;
     }
 
     .table-profil {
         margin: 2rem auto;
-        border: 3px solid $color4;
-        border-collapse: collapse;
-        width: 90%;
+        border: 3px solid $color2;
+        width: 50%;
     }
 
     thead,
@@ -25,13 +29,13 @@ Profil Section
 
     tbody {
         background-color: $color3;
-        border: 1px solid $color4;
+        border: 1px solid $color2;
     }
 
     th {
         font-family: 'EB Garamond', serif;
         font-size: 1.25rem;
-        border: 1px solid $color4;
+        border: 1px solid $color2;
         padding: 5px;
         background-color: $color3;
         width: 50%;
@@ -41,44 +45,58 @@ Profil Section
         text-align: center;
         font-family: 'EB Garamond', serif;
         font-size: 1.25rem;
-        border: 1px solid $color4;
-        padding: 5px;
+        border: 1px solid $color2;
+        padding: .5rem;
     }
 
     a {
-        font-family: 'Sansita Swashed', cursive;
+        font-family: "EB Garamond", serif;
         margin: 2rem auto;
         display: block;
-        font-size: 1.25rem;
+        font-size: 1.2rem;
         font-weight: 500;
         color: $color2;
+        border-radius: .6rem;
+        padding: .8rem .6rem;
+        background-color: $color1;
+        transition: .3s;
 
         &:hover {
             text-decoration: none;
-            color: $color4;
+            color: $color3;
+            background-color: $color4;
         }
     }
     .btn{
-        font-family: 'Sansita Swashed', cursive;
+        font-family: "EB Garamond", serif;
         margin: 2rem auto;
         display: block;
-        font-size: 1.25rem;
+        font-size: 1.2rem;
         font-weight: 500;
         color: $color2;
+        border-radius: .6rem;
+        padding: .8rem .6rem;
+        background-color: $color1;
+        transition: .3s;
 
         &:hover {
             text-decoration: none;
-            color: $color4;
+            color: $color3;
+            background-color: $color4;
         }
     }
 }
 
 .edit-wrapper {
     text-align: center;
+    height: 85vh;
+    background-color: $color2;
+    padding: 0.8rem;
 
     h1 {
         display: inline-block;
         margin: 2rem auto;
+        color: $color4;
     }
 
     .form-edit {
@@ -86,40 +104,51 @@ Profil Section
 
         label {
             font-family: 'EB Garamond', serif;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
+            color: $color3;
         }
 
         input {
             width: 50%;
             margin: auto;
-            text-align: center;
+            text-align: left;
         }
 
         button {
-            font-family: 'Sansita Swashed', cursive;
+            font-family: 'EB Garamond', serif;
             margin-top: 2rem;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 500;
             color: $color2;
+            border-radius: .6rem;
+            padding: .8rem .6rem;
+            background-color: $color1;
+            transition: .3s;
 
             &:hover {
                 text-decoration: none;
-                color: $color4;
+                color: $color3;
+                background-color: $color4;
             }
 
         }
     }
 
     a {
-        font-family: 'Sansita Swashed', cursive;
+        font-family: 'EB Garamond', serif;
         margin: 2rem auto;
-        font-size: 1.25rem;
+        font-size: 1.2rem;
         font-weight: 500;
         color: $color2;
+        border-radius: .6rem;
+        padding: .8rem .6rem;
+        background-color: $color1;
+        transition: .3s;
 
         &:hover {
             text-decoration: none;
-            color: $color4;
+            color: $color3;
+            background-color: $color4;
         }
     }
 }

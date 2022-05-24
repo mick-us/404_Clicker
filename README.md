@@ -1,5 +1,12 @@
 # 404 Clicker
 
+404 Clicker est un browser game basé sur le jeu Cookie Clicker.
+
+Projet de fin de formation POEC PHP-Symfony.
+
+Utilisation d'un environnment LAMP avec Docker et Symfony 5 lors de son développement : https://github.com/nicolasvauche/docker_sf5
+
+
 -----------------
 
 ## Table des matières
@@ -32,74 +39,84 @@ _maildev_ : 1.1.0
 ## Installation
 
 ***
-Explication sur l'installation des containers de Docker par la récupération du .zip
+- Docker sf5 projet github : https://github.com/nicolasvauche/docker_sf5
 
-Docker sf5 projet github : https://github.com/nicolasvauche/docker_sf5
+    Récupérez-le et initialisez-le en suivant son README.
 
-Récupérez le et initialisez le en suivant le read.me
+    Emplacement où mettre le clone :
 
-Emlpacement où mettre le site :
-```
-$ docker exec -it nom de l'image_www bash
-$ cd app
-```
+    ```
+    $ docker exec -it sf5_www bash
+    $ cd app
+    ```
 
-Pour l'installation de git et du clonage du site :
-```
-$ git clone https://github.com/mick-us/404_Clicker .
-```
+- Pour l'installation de git et du clonage du repository :
 
-Faire une copie du .env dans le dossier du site qui s'appellera env.local et modifier le fichier pour la base de données et utilisez bien l'adresse du mailer:
+    ```
+    $ git clone https://github.com/mitaksim1/404_Clicker .
+    ```
 
-###> symfony/mailer ###
-MAILER_DSN=smtp://docker_sf5_maildev:25
-###< symfony/mailer ###
+- Faire une copie du fichier *.env* dans un fichier que l'on va nommer *.env.local* et renseigner les données pour la création de votre base de données.
+    
+    ```
+    DATABASE_URL="mysql://nomUser:passwordUser@docker_sf5_mysql:3306/nomDatabase?serverVersion=5.7"
+    
+    ``` 
 
-###> doctrine/doctrine-bundle ###
-### # DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"
-DATABASE_URL="mysql://nomduuser:motdepasseduuser@docker_sf5_mysql:3306/nomdevotrebdd?serverVersion=5.7"
-### # DATABASE_URL="postgresql://db_user:db_password@127.0.0.1:5432/db_name?serverVersion=13&charset=utf8"
-###< doctrine/doctrine-bundle ###
+- Activez l'utilisation du mailer :
 
+    ```
+    ###> symfony/mailer ###
+    MAILER_DSN=smtp://docker_sf5_maildev:25
+    ###< symfony/mailer ###
+    ```
 
-Installer les dépendances sur le projet composer et node dans votre docker :
-```
-$ composer install
-$ curl -sL https://deb.nodesource.com/setup_16.x | bash -
-$ apt update && apt-get install -y nodejs
-```
+- Installez les dépendances du projet :
 
-Pour voir la version de votre node :
-```
-$ node -v
-```
+    ```
+    $ composer install
+    ```
 
-Installation de yarn dans le projet pour l'utilisation de webpack encore :
-```
-$ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-$ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-$ apt install yarn
-```
+- Si vous n'avez pas node.js installé dans votre machine : 
 
-Pour voir la version de votre yarn :
-```
-$ yarn -v
-```
+    ```
+    // Vérifie si node est installé et sa version
+    $ node -v
+    ```
 
-Utiliser la commande si dessous pour actualiser le scss et le js sur le site :
-```
-$ yarn watch
-```
+    ```
+    $ curl -sL https://deb.nodesource.com/setup_16.x | bash -
+    $ apt update && apt-get install -y nodejs
+    ```
 
-Mise en place la base de données :
-```
-$ php bin/console doctrine:database:create
-$ php bin/console doctrine:migrations:migrate
-$ php bin/console doctrine:fixtures:load
-```
+- Installation de yarn dans le projet pour l'utilisation de [Webpack Encore](https://github.com/symfony/webpack-encore) :
+    ```
+    $ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+    $ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+    $ apt install yarn
+    ```
 
-Pour la documentation avec PHPDocumentor (on active cela avec son .phar) :
-```
-$ php phpDocumentor.phar -d ./src -t docs/api
-```
+    ```
+    // Vérifie la version de yarn installé
+    $ yarn -v
+    ```
+
+- Utilisez la commande ci-dessous pour actualiser le scss et le js sur le site :
+
+    ```
+    $ yarn watch
+    ```
+
+- Mise en place la base de données :
+
+    ```
+    $ php bin/console doctrine:database:create
+    $ php bin/console doctrine:migrations:migrate
+    $ php bin/console doctrine:fixtures:load
+    ```
+
+- Pour la documentation avec PHPDocumentor (on active cela avec son .phar) :
+    ```
+    $ php phpDocumentor.phar -d ./src -t docs/api
+    ```
 Bravo vous avez fini l'installation de notre projet, maintenant faites vous plaisir avec ^^!

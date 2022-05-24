@@ -3,12 +3,13 @@
 ------------------------*/
 .home-wrapper {
     height: 85vh;
-    .home-content {
+   
+    .container.home {
         margin: 1rem auto;
-        height: 100%;
         width: 100%;
         h1 {
             text-align: center;
+            color: $color4;
         }
         
         p {
@@ -17,6 +18,7 @@
             font-size: 1.4rem;
             text-align: justify;
             margin-bottom: 0;
+            color: $color3;
         }
         
         .text-container {
@@ -27,6 +29,10 @@
         
         .text-container a {
             text-decoration: none;
+            
+            strong {
+                color: $color1;
+            }
         }
         
         .home-wrapper-text {
@@ -35,11 +41,16 @@
             text-decoration: none;
             font-family: 'EB Garamond', serif;
             font-size: 1.2rem;
+            color: $color3;
         }
         
-        .home-wrapper-text li>span {
-            color: $color2;
+        .home-wrapper-text li > span {
+            color: $color4;
             font-weight: bold;
+        }
+
+        .home-wrapper-text li span.level-name {
+            color: $color1;
         }
         
         a strong {

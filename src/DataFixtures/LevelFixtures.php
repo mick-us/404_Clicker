@@ -23,23 +23,19 @@ class LevelFixtures extends Fixture
             $level = new Level();
             switch($i){
                 case 0:
-                    $level->setMaxPoints(0);
-                    $level->setPathImg('/assets/images/level1_concept.png'); 
+                    $level->setImage('level1_concept.png'); 
                     $level->setNomLevel('conception');
                     break;
                 case 1:
-                    $level->setMaxPoints(20);
-                    $level->setPathImg('/assets/images/level2_dev.png'); 
+                    $level->setImage('level2_dev.png'); 
                     $level->setNomLevel('developpement');
                     break;
                 case 2:
-                    $level->setMaxPoints(50);
-                    $level->setPathImg('/assets/images/level3_prod.png'); 
+                    $level->setImage('level3_prod.png'); 
                     $level->setNomLevel('production');
                     break;
-                case 3:
-                    $level->setMaxPoints(100);
-                    $level->setPathImg('/assets/images/404.png'); 
+                case 3:    
+                    $level->setImage('404.png'); 
                     $level->setNomLevel('404'); 
                     break;
             }

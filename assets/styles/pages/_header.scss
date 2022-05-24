@@ -1,0 +1,75 @@
+/*------------------
+   Header section
+ ---------------------*/
+.header-section {
+    width: 100%;
+    background-color: $color3;
+
+    .header-container {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.479);
+        display: flex;
+        justify-content: space-between;
+        padding: .5rem;
+
+        .site-logo {
+            display: block;
+
+            img {
+                height: 70px;
+                width: 70px;
+            }
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+
+            ul {
+                display: flex;
+                list-style: none;
+        
+                li {
+                    text-align: center;
+                    margin-left: .8rem;
+
+                    a {
+                        font-family: 'Press Start 2P', cursive;
+                        color: $color2;
+                        font-size: .8rem;
+                        transition: .2s;
+
+                        &:hover {
+                            color: $color1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .header-buttons {
+            display: flex;
+            align-items: center;
+
+            .header-button a {
+                font-family: 'Press Start 2P', cursive;
+                font-weight: 500;
+                font-size: .6rem;
+                color: $color2;
+                margin-right: .6rem;
+                padding: 1rem .8rem;
+                border-radius: .6rem;
+                background: $color1;
+                transition: .2s;
+
+                &:hover {
+                    color: $color3;
+                    background-color: $color4;
+                }
+            }
+        }
+        
+            
+    }
+
+}
+

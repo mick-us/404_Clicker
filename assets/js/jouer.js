@@ -2,13 +2,13 @@ const { default: axios } = require('axios');
 
 let game = {
 	score: document.getElementById("score"),
-	image: document.getElementById("image"),
+	image: document.querySelector(".image"),
 	saveButton: document.querySelector('.save-points'),
 	modal: document.querySelector(".modal"),
 	scoreJS: parseFloat(score.dataset.userPoints),
 	incrementeur: 1,
 	changeLevelScore: parseInt(score.dataset.userLevel),
-	url: "http://localhost:1234/save_axios",
+	url: "https://127.0.0.1:8000/save_axios",
 
 	init: function () {
 		// Preloader
@@ -16,7 +16,7 @@ let game = {
 
 		setTimeout(() => {
 			game.modal.style.display = "none";
-		}, 1500);
+		}, 2000);
 		
 		game.image.addEventListener("click", game.handleClick);
 		game.saveButton.addEventListener("click", game.loadGame);
@@ -26,7 +26,7 @@ let game = {
 	handleClick: function () {
 		game.scoreJS = game.scoreJS + game.incrementeur;
 
-		game.score.innerHTML = "<p>Le nombre d'erreur(s) est de \n" + game.scoreJS + "</p>";
+		game.score.innerHTML = "<p><span>Points : \n</span>" + game.scoreJS + "</p>";
 
 		if (game.scoreJS === game.changeLevelScore) {
 			// console.log('Changement de niveau');
